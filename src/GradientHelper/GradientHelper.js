@@ -4,11 +4,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default class GradientHelper extends Component {
 
   render() {
-    const { color1, color2, style, children } = this.props;
+    const { beginColor, endColor, style, children } = this.props;
 
     return (
       <LinearGradient
-        colors={[color1, color2]}
+        colors={[beginColor, endColor]}
         style={{ flex: 1, }}
       >
         {children}

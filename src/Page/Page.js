@@ -10,8 +10,8 @@ export default function Page(props) {
     <Fragment>
       <StatusBar barStyle="light-content" />
       <AnimatedLinearGradient
-        color1={backgroundColors[0]}
-        color2={backgroundColors[1]}
+        beginColor={backgroundColors[0]}
+        endColor={backgroundColors[1]}
       >
         <PageContainer>{children}</PageContainer>
       </AnimatedLinearGradient>

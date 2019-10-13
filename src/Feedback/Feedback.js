@@ -54,7 +54,7 @@ export default function App() {
   const [star, setStar] = useState('neutral');
   const [path, setPath] = useState(PATHS['neutral']);
   const [backgroundColorsAnimated] = useState(new Animated.Value(2));
-  const backgroundColor1 = backgroundColorsAnimated.interpolate({
+  const backgroundBeginColor = backgroundColorsAnimated.interpolate({
     inputRange: [0, 1, 2, 3, 4],
     outputRange: [
       COLORS.upset[0],
@@ -64,7 +64,7 @@ export default function App() {
       COLORS.excited[0],
     ],
   });
-  const backgroundColor2 = backgroundColorsAnimated.interpolate({
+  const backgroundEndColor = backgroundColorsAnimated.interpolate({
     inputRange: [0, 1, 2, 3, 4],
     outputRange: [
       COLORS.upset[1],
@@ -98,7 +98,7 @@ export default function App() {
   }
   
   return (
-    <Page backgroundColors={[backgroundColor1, backgroundColor2]}>
+    <Page backgroundColors={[backgroundBeginColor, backgroundEndColor]}>
       <Content>
         <Title>Please rate your experience</Title>
         <SubtitleContainer>
